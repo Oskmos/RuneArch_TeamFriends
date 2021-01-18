@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02a7e82292a45e6a9003bc1797b1c19, type: 3}
   m_Name: Intelligence
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 99c2963383d1cf5489ffc2d412983311, type: 3}
