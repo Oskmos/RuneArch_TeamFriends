@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02a7e82292a45e6a9003bc1797b1c19, type: 3}
   m_Name: Agility
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 956a03eddc5e18442bed236059201ff7, type: 3}
