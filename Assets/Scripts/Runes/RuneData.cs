@@ -1,25 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
 
-namespace Runes
-{
-    public class RuneData
-    {
-
-        public RuneRarity RuneRarity;
-
-        public RuneType RuneType;
-        
-        
-        
-    }
-
-    public class RuneRarity : ScriptableObject
-    {
-    
-    }
-
-    public class RuneType : ScriptableObject
-    {
-        //ASD
+namespace Runes {
+    [Serializable]
+    public class RuneData {
+        public RuneType runeType;
+        public RuneRarity runeRarity;
     }
 }
