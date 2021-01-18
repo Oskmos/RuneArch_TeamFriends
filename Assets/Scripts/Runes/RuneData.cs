@@ -16,7 +16,7 @@ namespace Runes {
         public void CombineWith(RuneData runeData)
         {
             amount += runeData.amount;
-            runeData.amount -= amount;
+            runeData.amount -= runeData.amount;
         }
     }
 }
