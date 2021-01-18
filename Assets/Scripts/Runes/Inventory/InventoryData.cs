@@ -14,7 +14,19 @@ namespace Runes
             RuneData rune = GetRune(runeData);
             if(rune == null)
             {
-                //runes.Add(new RuneData(rune));
+                runes.Add(new RuneData(rune));
+            }
+            else
+            {
+
+            }
+        }
+        public void RemoveRune(RuneData runeData)
+        {
+            RuneData rune = GetRune(runeData);
+            if (rune != null)
+            {
+                runes.Remove(rune);
             }
         }
 
