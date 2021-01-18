@@ -6,7 +6,6 @@ namespace Runes
 {
     public class Rune : MonoBehaviour{
         public RuneData runeData;
-
         Image _runeSprite;
         
         void Awake() {
