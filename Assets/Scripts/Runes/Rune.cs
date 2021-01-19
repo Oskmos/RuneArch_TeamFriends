@@ -23,8 +23,16 @@ namespace Runes
 
         public void RefreshVisuals() {
             _runeSprite.sprite = runeData.runeType.Icon;
-            _runeSprite.color = runeData.runeRarity.RarityColor;
-            amountText.text = runeData.amount.ToString();
+            _runeSprite.color = runeData.runeRarity.RarityColor; 
+
+            if (runeData.amount <= 1)
+            {
+                amountText.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                amountText.transform.parent.gameObject.SetActive(true);
+            }
         }
     }
 }
