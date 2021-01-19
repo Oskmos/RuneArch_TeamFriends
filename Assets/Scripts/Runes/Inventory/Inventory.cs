@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Runes.Inventory
+namespace Runes
 {
     public class Inventory : MonoBehaviour
     {

@@ -31,12 +31,10 @@ public class MoveToMerger : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
         
         var currentInventory = eventData.hovered.Find(x => x.GetComponent<InventoryData>());
         //Debug.Log(currentInventory.name);
-        if (currentInventory == null) {
+        if (currentInventory == null || !currentInventory.GetComponent<InventoryData>().AddRune(_selectedRune.GetComponent<Rune>().RuneData)) {
             _inventoryData.AddRune(_selectedRune.GetComponent<Rune>().RuneData);
         }
-        else {
-            currentInventory.GetComponent<InventoryData>().AddRune(_selectedRune.GetComponent<Rune>().RuneData);    
-        }
+
         Destroy(_selectedRune);
     }
 
