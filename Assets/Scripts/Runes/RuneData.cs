@@ -11,6 +11,13 @@ namespace Runes {
         {
             runeType = runeData.runeType;
             runeRarity = runeData.runeRarity;
+            amount = runeData.amount;
+        }
+        public RuneData(RuneType runeType, RuneRarity runeRarity, int amount)
+        {
+            this.runeType = runeType;
+            this.runeRarity = runeRarity;
+            this.amount = amount;
         }
 
         public void CombineWith(RuneData runeData)

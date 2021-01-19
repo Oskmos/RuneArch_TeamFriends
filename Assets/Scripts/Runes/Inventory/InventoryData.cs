@@ -14,7 +14,7 @@ namespace Runes
             RuneData rune = GetRune(runeData);
             if(rune == null)
             {
-                runes.Add(new RuneData(rune));
+                runes.Add(new RuneData(runeData));
             }
             else
             {

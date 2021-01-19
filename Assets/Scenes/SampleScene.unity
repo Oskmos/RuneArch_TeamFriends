@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 45997475}
   - component: {fileID: 45997474}
   - component: {fileID: 45997476}
+  - component: {fileID: 45997478}
+  - component: {fileID: 45997477}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -242,6 +244,41 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &45997477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45997472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db26acc91bcfff44bf630e088e5e930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runes:
+  - runeType: {fileID: 0}
+    runeRarity: {fileID: 0}
+    amount: 0
+  - runeType: {fileID: 0}
+    runeRarity: {fileID: 0}
+    amount: 0
+  - runeType: {fileID: 0}
+    runeRarity: {fileID: 0}
+    amount: 0
+--- !u!114 &45997478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45997472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b391cc827a740c040953cec281a9b7fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
 --- !u!1 &107371815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,10 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c7f25cda65c474aac287928ad5ada9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mergerSlot1: {fileID: 1186743148}
-  _mergerSlot2: {fileID: 178814194}
-  _mergerSlot3: {fileID: 922942786}
-  _mergerSlot4: {fileID: 303765162}
+  inventory: {fileID: 0}
 --- !u!1 &346304512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,8 +1661,9 @@ GameObject:
   - component: {fileID: 525832316}
   - component: {fileID: 525832315}
   - component: {fileID: 525832314}
+  - component: {fileID: 525832317}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1696,7 +1731,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525832315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 525832317}
+        m_TargetAssemblyTypeName: Runes.BuyRunesController, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &525832315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1735,6 +1782,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525832312}
   m_CullTransparentMesh: 0
+--- !u!114 &525832317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525832312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63635e709eb4d149a07d0e353c69cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 45997477}
+  runeTypes:
+  - {fileID: 11400000, guid: 444f50772da697841a8fc02656c0d025, type: 2}
+  - {fileID: 11400000, guid: 04d01848fe76373468ceb089a286dff6, type: 2}
+  - {fileID: 11400000, guid: a1e9477dff8e74b4e9c80295846dcbfd, type: 2}
+  runeRarity: {fileID: 11400000, guid: 54b6d7bdffcb3dc47af853aca4f817f4, type: 2}
+  amountOfRunes: 4
 --- !u!1001 &590423558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2847,7 +2913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 552, y: -115}
+  m_AnchoredPosition: {x: 620.37, y: -115}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572673772
@@ -3268,7 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 2
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -3911,7 +3977,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7f7edc873b436380f6b1bc1594154e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runeMover: {fileID: 337167409}
+  runeEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1992284996
 GameObject:
   m_ObjectHideFlags: 0
