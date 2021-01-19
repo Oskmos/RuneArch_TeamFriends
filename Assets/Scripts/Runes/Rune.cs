@@ -21,7 +21,7 @@ namespace Runes
             RefreshVisuals();
         }
 
-        void RefreshVisuals() {
+        public void RefreshVisuals() {
             _runeSprite.sprite = runeData.runeType.Icon;
             _runeSprite.color = runeData.runeRarity.RarityColor;
             amountText.text = runeData.amount.ToString();
