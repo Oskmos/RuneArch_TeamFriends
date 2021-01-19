@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Runes
 {
     [System.Serializable]
-    public class InventoryData
+    public class InventoryData : MonoBehaviour
     {
         public List<RuneData> runes = new List<RuneData>();
 
@@ -18,7 +18,7 @@ namespace Runes
             }
             else
             {
-
+                rune.CombineWith(runeData);
             }
         }
         public void RemoveRune(RuneData runeData)
