@@ -5,6 +5,9 @@ using Random = UnityEngine.Random;
 namespace Runes.Merger {
     public class MergeController : MonoBehaviour {
         MergeData _mergeData;
+        
+        //Merge Slot - Since we will only ever have ONE merge slot i figured we can just do this ? IS IT ALLOWED?!?!?!?! APFELSCHTRUDEL!
+        public GameObject mergeSlot;
 
         void Awake() {
             _mergeData = GetComponent<MergeData>();
