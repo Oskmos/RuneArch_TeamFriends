@@ -68,5 +68,11 @@ namespace Runes
         {
             RemoveRune(new RuneData(tempType, tempRarity, 1));
         }
+
+        public void Clear()
+        {
+            runes = new List<RuneData>();
+            onChange.Invoke(this);
+        }
     }
 }
