@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 8051378871822227879}
   - component: {fileID: 8051378871822227896}
   - component: {fileID: 8051378871822227897}
-  - component: {fileID: 8051378871822227898}
   m_Layer: 5
   m_Name: Rune Prefab
   m_TagString: Untagged
@@ -211,6 +210,7 @@ MonoBehaviour:
     runeType: {fileID: 11400000, guid: 04d01848fe76373468ceb089a286dff6, type: 2}
     runeRarity: {fileID: 11400000, guid: 28218127ac9875d42b5f5d9d7b2388b3, type: 2}
     amount: 0
+  amountText: {fileID: 6042066653925184825}
 --- !u!222 &8051378871822227896
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -249,15 +249,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8051378871822227898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8051378871822227900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dea98339676da74faf74cd2fdf73919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
