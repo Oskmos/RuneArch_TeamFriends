@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿using Runes;
+using Runes.Inventory;
+using UnityEngine;
 
 namespace Controllers {
-    public class RuneMover : MonoBehaviour{
-        public RectTransform _mergerSlot1, _mergerSlot2, _mergerSlot3, _mergerSlot4;
+    public class RuneMover : MonoBehaviour {
+        public Inventory inventory;
 
-
-        public void MoveToMerger(GameObject rune) {
-            //Check if & what slot is empty and moves Rune to here.   
-            rune.GetComponent<RectTransform>().SetParent(_mergerSlot1.transform);
-            rune.transform.position = new Vector3(0, 0, 0);
+        public void MoveToMerger(RuneData data) {
+            //Check if & what slot is empty and moves Rune to here.
+            //LOCAL POS
+            // inventory.data.
+            // rune.transform.position = new Vector3(0, 0, 0);
+            
         }
     }
 }

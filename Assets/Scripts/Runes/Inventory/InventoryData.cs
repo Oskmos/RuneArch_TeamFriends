@@ -9,7 +9,7 @@ namespace Runes
     {
         public List<RuneData> runes = new List<RuneData>();
 
-        public void AddRune(RuneData runeData)
+        public virtual void AddRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
             if(rune == null)
@@ -21,7 +21,7 @@ namespace Runes
                 rune.CombineWith(runeData);
             }
         }
-        public void RemoveRune(RuneData runeData)
+        public virtual void RemoveRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
             if (rune != null)
