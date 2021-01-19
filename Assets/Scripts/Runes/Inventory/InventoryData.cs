@@ -23,13 +23,17 @@ namespace Runes
                 rune.CombineWith(runeData);
             }
             onChange.Invoke(this);
+
+            //AddRune(new RuneData(runeData.runeType, runeData.runeRarity, 1));
         }
         public virtual void RemoveRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
             if (rune != null)
             {
-                runes.Remove(rune);
+                rune.amount -= runeData.amount;
+                if(rune.amount == 0)
+                    runes.Remove(rune);
             }
             onChange.Invoke(this);
         }
