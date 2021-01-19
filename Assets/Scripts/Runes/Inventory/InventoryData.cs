@@ -11,7 +11,10 @@ namespace Runes
         public List<RuneData> runes = new List<RuneData>();
         public UnityEvent<InventoryData> onChange;
 
-        public virtual void AddRune(RuneData runeData)
+        public RuneRarity tempRarity;
+        public RuneType tempType;
+
+        public virtual bool AddRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
             if(rune == null)
@@ -23,8 +26,7 @@ namespace Runes
                 rune.CombineWith(runeData);
             }
             onChange.Invoke(this);
-
-            //AddRune(new RuneData(runeData.runeType, runeData.runeRarity, 1));
+            return true;
         }
         public virtual void RemoveRune(RuneData runeData)
         {
@@ -53,6 +55,18 @@ namespace Runes
                 }
             }
             return null;
+        }
+
+        [ContextMenu("AddaRuneTillFacebook")]
+        public void AddaRuneTillFacebook()
+        {
+            AddRune(new RuneData(tempType, tempRarity, 1));
+        }
+
+        [ContextMenu("HataRune")]
+        public void HataRune()
+        {
+            RemoveRune(new RuneData(tempType, tempRarity, 1));
         }
     }
 }

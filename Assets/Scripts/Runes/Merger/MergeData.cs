@@ -3,11 +3,12 @@
         RuneRarity _currentRuneRarity;
         const string ForbiddenRarity = "Legendary";
 
-        public override void AddRune(RuneData runeData) {
-            if (runeData.runeRarity.name == ForbiddenRarity) return;
-            if (runeData.runeRarity != _currentRuneRarity && _currentRuneRarity != null) return;
+        public override bool AddRune(RuneData runeData) {
+            if (runeData.runeRarity.name == ForbiddenRarity) return false;
+            if (runeData.runeRarity != _currentRuneRarity && _currentRuneRarity != null) return false;
             base.AddRune(runeData);
             _currentRuneRarity = runeData.runeRarity;
+            return true;
         }
 
         public override void RemoveRune(RuneData runeData) {
