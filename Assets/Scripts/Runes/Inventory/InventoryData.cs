@@ -57,18 +57,6 @@ namespace Runes
             return null;
         }
 
-        [ContextMenu("AddaRuneTillFacebook")]
-        public void AddaRuneTillFacebook()
-        {
-            AddRune(new RuneData(tempType, tempRarity, 1));
-        }
-
-        [ContextMenu("HataRune")]
-        public void HataRune()
-        {
-            RemoveRune(new RuneData(tempType, tempRarity, 1));
-        }
-
         public void Clear()
         {
             runes = new List<RuneData>();
