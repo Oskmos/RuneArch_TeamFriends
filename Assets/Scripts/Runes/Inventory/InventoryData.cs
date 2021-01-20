@@ -10,10 +10,11 @@ namespace Runes
     {
         public List<RuneData> runes = new List<RuneData>();
         public UnityEvent<InventoryData> onChange;
-
+        public UnityEvent<RuneData> onAdd;
         public virtual bool AddRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
+            
             if(rune == null)
             {
                 runes.Add(new RuneData(runeData));
@@ -22,11 +23,13 @@ namespace Runes
             {
                 rune.CombineWith(runeData);
             }
-            onChange.Invoke(this);
+            //onAdd?.Invoke(runeData);
+            onChange?.Invoke(this);
             return true;
         }
         public virtual void RemoveRune(RuneData runeData)
         {
+            //TODO: Try to return runeData
             RuneData rune = GetRune(runeData);
             if (rune != null)
             {

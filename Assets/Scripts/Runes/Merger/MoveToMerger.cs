@@ -14,7 +14,6 @@ namespace Runes.Merger {
             _selectedRune.GetComponent<Image>().raycastTarget = false;
             return false;
         }
-        
         void InventoryHandler(GameObject currentInventory) {
             if (currentInventory == null || !currentInventory.GetComponent<InventoryData>()
                 .AddRune(_selectedRune.GetComponent<Rune>().RuneData)) {

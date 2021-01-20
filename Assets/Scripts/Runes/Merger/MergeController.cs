@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.Events;
 
 namespace Runes.Merger {
     public class MergeController : MonoBehaviour {
@@ -8,7 +9,7 @@ namespace Runes.Merger {
         public MergeData resultData;
 
         [SerializeField] RuneRarity[] rarities;
-
+        [SerializeField]UnityEvent onClearOutput;
         void Awake() {
             _mergeData = GetComponent<MergeData>();
         }
@@ -19,7 +20,9 @@ namespace Runes.Merger {
         {
             if (resultData.CurrentAmount() > 0)
             {
-                return;
+                onClearOutput?.Invoke();
+                if(resultData.CurrentAmount() > 0)
+                    throw new Exception("Error, Didn't clear other inventory");
             }
             if (_mergeData.CurrentAmount() < 2) return;
             var chanceToUpgrade = 0;

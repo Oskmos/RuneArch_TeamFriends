@@ -369,8 +369,9 @@ MonoBehaviour:
   onChange:
     m_PersistentCalls:
       m_Calls: []
-  tempRarity: {fileID: 0}
-  tempType: {fileID: 0}
+  onAdd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &45997478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,9 +1378,9 @@ MonoBehaviour:
   onChange:
     m_PersistentCalls:
       m_Calls: []
-  tempRarity: {fileID: 0}
-  tempType: {fileID: 0}
-  forbiddenRarity: {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
+  onAdd:
+    m_PersistentCalls:
+      m_Calls: []
   maxAmount: 4
 --- !u!114 &337167410
 MonoBehaviour:
@@ -1417,6 +1418,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29febb143a9bfe143b463ef396c08787, type: 2}
   - {fileID: 11400000, guid: 28218127ac9875d42b5f5d9d7b2388b3, type: 2}
   - {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
+  onClearOutput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 589748541}
+        m_TargetAssemblyTypeName: Runes.MoveToTargetInventory, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &354086245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8051378871822227899, guid: 092e1a8578ded474fbf6f61790311d58, type: 3}
@@ -2065,6 +2081,7 @@ GameObject:
   - component: {fileID: 589748537}
   - component: {fileID: 589748539}
   - component: {fileID: 589748540}
+  - component: {fileID: 589748541}
   m_Layer: 5
   m_Name: ResultGrid
   m_TagString: Untagged
@@ -2146,9 +2163,9 @@ MonoBehaviour:
   onChange:
     m_PersistentCalls:
       m_Calls: []
-  tempRarity: {fileID: 0}
-  tempType: {fileID: 0}
-  forbiddenRarity: {fileID: 0}
+  onAdd:
+    m_PersistentCalls:
+      m_Calls: []
   maxAmount: 1
 --- !u!114 &589748540
 MonoBehaviour:
@@ -2164,6 +2181,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runes:
   - {fileID: 1539054399}
+--- !u!114 &589748541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589748535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad869b785a0e43699b215055a7a46897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveToInventoryData: {fileID: 45997477}
 --- !u!1001 &590423558
 PrefabInstance:
   m_ObjectHideFlags: 0

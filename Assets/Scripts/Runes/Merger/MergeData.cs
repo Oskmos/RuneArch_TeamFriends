@@ -11,8 +11,8 @@ namespace Runes.Merger {
             if (runeData.runeRarity == forbiddenRarity) return false;
             if (runeData.runeRarity != _currentRuneRarity && _currentRuneRarity != null) return false;
             if (CurrentAmount() + runeData.amount > maxAmount) return false;
-            base.AddRune(runeData);
             _currentRuneRarity = runeData.runeRarity;
+            base.AddRune(runeData);
             return true;
         }
 
