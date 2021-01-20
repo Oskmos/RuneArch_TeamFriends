@@ -9,13 +9,12 @@ namespace Runes.Merger{
         [SerializeField]InventoryData inventoryData;
         [SerializeField]UnityEvent moveRuneDataEvent;
         [SerializeField] RuneRarity forbiddenRarity;
-        //TODO: Merge data list
+
         void Start(){
             mergeData.onAdd.AddListener(Check);
         }
 
         void Check(RuneData runeData){
-            print(runeData.amount);
             if (runeData.runeRarity == forbiddenRarity){
                 mergeData.RemoveRune(runeData);
                 inventoryData.AddRune(runeData);
@@ -23,7 +22,6 @@ namespace Runes.Merger{
                 ExchangeRunes();
             }
             if (mergeData.CurrentAmount() > mergeData.maxAmount){
-                print("Merge inventory:" + mergeData.CurrentAmount());
                 inventoryData.AddRune(runeData);
                 mergeData.RemoveRune(runeData);
             }

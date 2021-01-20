@@ -379,6 +379,12 @@ MonoBehaviour:
   onAdd:
     m_PersistentCalls:
       m_Calls: []
+  rarities:
+  - {fileID: 11400000, guid: 54b6d7bdffcb3dc47af853aca4f817f4, type: 2}
+  - {fileID: 11400000, guid: 33a7c886c9eaaf3469d58d8a0c6331cc, type: 2}
+  - {fileID: 11400000, guid: 29febb143a9bfe143b463ef396c08787, type: 2}
+  - {fileID: 11400000, guid: 28218127ac9875d42b5f5d9d7b2388b3, type: 2}
+  - {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
 --- !u!114 &45997478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1403,6 +1409,12 @@ MonoBehaviour:
   onAdd:
     m_PersistentCalls:
       m_Calls: []
+  rarities:
+  - {fileID: 11400000, guid: 54b6d7bdffcb3dc47af853aca4f817f4, type: 2}
+  - {fileID: 11400000, guid: 33a7c886c9eaaf3469d58d8a0c6331cc, type: 2}
+  - {fileID: 11400000, guid: 29febb143a9bfe143b463ef396c08787, type: 2}
+  - {fileID: 11400000, guid: 28218127ac9875d42b5f5d9d7b2388b3, type: 2}
+  - {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
   forbiddenRarity: {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
   maxAmount: 4
 --- !u!114 &337167410
@@ -2220,6 +2232,12 @@ MonoBehaviour:
   onAdd:
     m_PersistentCalls:
       m_Calls: []
+  rarities:
+  - {fileID: 11400000, guid: 54b6d7bdffcb3dc47af853aca4f817f4, type: 2}
+  - {fileID: 11400000, guid: 33a7c886c9eaaf3469d58d8a0c6331cc, type: 2}
+  - {fileID: 11400000, guid: 29febb143a9bfe143b463ef396c08787, type: 2}
+  - {fileID: 11400000, guid: 28218127ac9875d42b5f5d9d7b2388b3, type: 2}
+  - {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
   forbiddenRarity: {fileID: 0}
   maxAmount: 1
 --- !u!114 &589748540

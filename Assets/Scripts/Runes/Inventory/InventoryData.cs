@@ -10,7 +10,14 @@ namespace Runes
     {
         public List<RuneData> runes = new List<RuneData>();
         public UnityEvent<InventoryData> onChange;
-        public UnityEvent<RuneData> onAdd;
+        public UnityEvent<RuneData> onAdd; 
+        public RuneRarity[] rarities;
+
+        private void Awake()
+        {
+            SortByRarity();
+        }
+
         public virtual bool AddRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
@@ -23,7 +30,8 @@ namespace Runes
             {
                 rune.CombineWith(runeData);
             }
-            onAdd?.Invoke(runeData);
+            onAdd?.Invoke(runeData); 
+            SortByRarity();
             onChange?.Invoke(this);
             return true;
         }
@@ -37,6 +45,7 @@ namespace Runes
                 if(rune.amount == 0)
                     runes.Remove(rune);
             }
+            SortByRarity();
             onChange.Invoke(this);
         }
 
@@ -61,6 +70,21 @@ namespace Runes
         {
             runes = new List<RuneData>();
             onChange.Invoke(this);
+        }
+        public void SortByRarity()
+        {
+            List<RuneData> newRunes = new List<RuneData>();
+            for (int i = rarities.Length-1; i >= 0; i--)
+            {
+                foreach (var rune in runes)
+                {
+                    if (rune.runeRarity == rarities[i])
+                    {
+                        newRunes.Add(rune);
+                    }
+                }
+            }
+            runes = newRunes;
         }
     }
 }
