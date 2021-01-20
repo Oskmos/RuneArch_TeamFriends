@@ -3,6 +3,7 @@
         RuneRarity _currentRuneRarity;
         const string ForbiddenRarity = "Legendary";
         public int maxAmount;
+        public RuneRarity CurrentRuneRarity { get => _currentRuneRarity; }
 
         public override bool AddRune(RuneData runeData) {
             if (runeData.runeRarity.name == ForbiddenRarity) return false;
