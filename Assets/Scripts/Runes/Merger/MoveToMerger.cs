@@ -36,7 +36,8 @@ namespace Runes.Merger {
         
         //Handles Inventory add / remove from our inventory and merger inventory.
         public void OnEndDrag(PointerEventData eventData) {
-            var currentInventory = eventData.hovered.Find(x => x.GetComponent<InventoryData>());
+            if (_selectedRune == null) return;
+            var currentInventory = eventData.hovered.Find(x => x.GetComponent<InventoryData>());            
             InventoryHandler(currentInventory);
         }
         

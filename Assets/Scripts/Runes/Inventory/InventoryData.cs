@@ -11,9 +11,6 @@ namespace Runes
         public List<RuneData> runes = new List<RuneData>();
         public UnityEvent<InventoryData> onChange;
 
-        public RuneRarity tempRarity;
-        public RuneType tempType;
-
         public virtual bool AddRune(RuneData runeData)
         {
             RuneData rune = GetRune(runeData);
@@ -57,7 +54,7 @@ namespace Runes
             return null;
         }
 
-        public void Clear()
+        public virtual void Clear()
         {
             runes = new List<RuneData>();
             onChange.Invoke(this);
