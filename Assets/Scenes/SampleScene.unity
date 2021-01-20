@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 45997476}
   - component: {fileID: 45997478}
   - component: {fileID: 45997477}
+  - component: {fileID: 45997479}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -406,6 +407,19 @@ MonoBehaviour:
   - {fileID: 442048257}
   - {fileID: 1447764663}
   - {fileID: 485821122}
+--- !u!114 &45997479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45997472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad869b785a0e43699b215055a7a46897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveToInventoryData: {fileID: 337167409}
 --- !u!1 &107371815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1287,7 @@ GameObject:
   - component: {fileID: 337167410}
   - component: {fileID: 337167411}
   - component: {fileID: 337167412}
+  - component: {fileID: 337167413}
   m_Layer: 5
   m_Name: Merger
   m_TagString: Untagged
@@ -1459,6 +1474,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   forbiddenRarity: {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
+--- !u!114 &337167413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337167404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad869b785a0e43699b215055a7a46897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveToInventoryData: {fileID: 45997477}
 --- !u!224 &354086245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8051378871822227899, guid: 092e1a8578ded474fbf6f61790311d58, type: 3}
