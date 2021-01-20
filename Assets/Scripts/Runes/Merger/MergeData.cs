@@ -2,25 +2,19 @@
 
 namespace Runes.Merger {
     public class MergeData : InventoryData {
-        RuneRarity _currentRuneRarity;
         [SerializeField] RuneRarity forbiddenRarity;
         public int maxAmount;
-        public RuneRarity CurrentRuneRarity { get => _currentRuneRarity; }
+        public RuneRarity CurrentRuneRarity => runes.Count > 0? runes[0].runeRarity : null;
 
         public override bool AddRune(RuneData runeData) {
-            if (runeData.runeRarity == forbiddenRarity) return false;
-            if (runeData.runeRarity != _currentRuneRarity && _currentRuneRarity != null) return false;
-            if (CurrentAmount() + runeData.amount > maxAmount) return false;
-            _currentRuneRarity = runeData.runeRarity;
+            //if (runeData.runeRarity == forbiddenRarity) return false;
+            //if (runeData.runeRarity != _currentRuneRarity && _currentRuneRarity != null) return false;
             base.AddRune(runeData);
             return true;
         }
 
         public override void RemoveRune(RuneData runeData) {
             base.RemoveRune(runeData);
-            if (runes.Count == 0) {
-                _currentRuneRarity = null;
-            }
         }
 
         public int CurrentAmount()
@@ -35,7 +29,6 @@ namespace Runes.Merger {
 
         public override void Clear()
         {
-            _currentRuneRarity = null;
             base.Clear();
         }
     }

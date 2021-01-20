@@ -366,6 +366,12 @@ MonoBehaviour:
   - runeType: {fileID: 11400000, guid: 04d01848fe76373468ceb089a286dff6, type: 2}
     runeRarity: {fileID: 11400000, guid: 29febb143a9bfe143b463ef396c08787, type: 2}
     amount: 50
+  - runeType: {fileID: 11400000, guid: 04d01848fe76373468ceb089a286dff6, type: 2}
+    runeRarity: {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
+    amount: 50
+  - runeType: {fileID: 11400000, guid: 04d01848fe76373468ceb089a286dff6, type: 2}
+    runeRarity: {fileID: 11400000, guid: 28218127ac9875d42b5f5d9d7b2388b3, type: 2}
+    amount: 50
   onChange:
     m_PersistentCalls:
       m_Calls: []
@@ -1266,6 +1272,7 @@ GameObject:
   - component: {fileID: 337167409}
   - component: {fileID: 337167410}
   - component: {fileID: 337167411}
+  - component: {fileID: 337167412}
   m_Layer: 5
   m_Name: Merger
   m_TagString: Untagged
@@ -1381,6 +1388,7 @@ MonoBehaviour:
   onAdd:
     m_PersistentCalls:
       m_Calls: []
+  forbiddenRarity: {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
   maxAmount: 4
 --- !u!114 &337167410
 MonoBehaviour:
@@ -1433,6 +1441,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &337167412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337167404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb4fb7b2f0146368cb4658eb57a26e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergeData: {fileID: 337167409}
+  inventoryData: {fileID: 45997477}
+  moveRuneDataEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  forbiddenRarity: {fileID: 11400000, guid: c9cbc353bef7e304e88cac866cc7f101, type: 2}
 --- !u!224 &354086245 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8051378871822227899, guid: 092e1a8578ded474fbf6f61790311d58, type: 3}
@@ -2166,6 +2192,7 @@ MonoBehaviour:
   onAdd:
     m_PersistentCalls:
       m_Calls: []
+  forbiddenRarity: {fileID: 0}
   maxAmount: 1
 --- !u!114 &589748540
 MonoBehaviour:

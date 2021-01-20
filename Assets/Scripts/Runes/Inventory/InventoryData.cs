@@ -23,7 +23,7 @@ namespace Runes
             {
                 rune.CombineWith(runeData);
             }
-            //onAdd?.Invoke(runeData);
+            onAdd?.Invoke(runeData);
             onChange?.Invoke(this);
             return true;
         }

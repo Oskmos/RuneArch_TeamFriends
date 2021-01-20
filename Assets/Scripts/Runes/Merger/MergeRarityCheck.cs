@@ -15,14 +15,25 @@ namespace Runes.Merger{
         }
 
         void Check(RuneData runeData){
+            print(runeData.amount);
             if (runeData.runeRarity == forbiddenRarity){
                 mergeData.RemoveRune(runeData);
                 inventoryData.AddRune(runeData);
+            } else if(runeData.runeRarity != mergeData.CurrentRuneRarity){
+                ExchangeRunes();
             }
-            if(mergeData.CurrentRuneRarity == runeData.runeRarity)
-                return;
-            //moveRuneDataEvent?.Invoke();
-            mergeData.AddRune(runeData);
+            if (mergeData.CurrentAmount() > mergeData.maxAmount){
+                print("Merge inventory:" + mergeData.CurrentAmount());
+                inventoryData.AddRune(runeData);
+                mergeData.RemoveRune(runeData);
+            }
+        }
+
+        void ExchangeRunes(){
+            while (mergeData.runes.Count > 1){
+                inventoryData.AddRune(mergeData.runes[0]);
+                mergeData.RemoveRune(mergeData.runes[0]);
+            }
         }
 
     }
